@@ -1,0 +1,468 @@
+/* Eviter les problèmes d'affichage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/accueil/Letchis-Réunion.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Ajouter une page blanche par dessus le background-image */
+.contenu {
+    height: auto;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.582) !important;
+    margin: 0 auto; /*haut,bas (0) gauche,droite (auto)*/
+    border-left: 1px solid rgb(184, 10, 10);
+    border-right: 1px solid rgb(184, 10, 10);
+}
+
+/* Barre de Menu */
+#figure_pointer {
+    width: 700px;
+    height: 50px;
+    position: relative;
+    background: rgb(184, 10, 10);
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#figure_pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;  
+}
+
+#figure_pointer:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid rgb(184, 10, 10);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;  
+}
+
+.menu ul {
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    display: block;
+    padding: 15px;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu a:hover {
+    background: black;
+    color: yellowgreen;
+    transition: 0.6s;
+}
+
+/* Titre de la page d'accueil */ 
+.contenu_titre {
+    border: 3px double rgb(184, 10, 10);
+    width: 80%;
+    height: 30%;
+    margin: auto; /* centrer le cadre */ 
+    background-color: #ffe4c4;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.accueil_titre {
+    text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);color:#fff;
+}
+
+/* Présentation */ 
+.contenu_intro {
+    border: 3px double rgb(184, 10, 10);
+    width: 80%;
+    height: 30%;
+    margin: auto; /* centrer le cadre */ 
+    background-color: #ffe4c4;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro_texte {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+/* Slideshow présentation */
+.slideshow {
+    border: 5px solid white;
+    box-shadow: 0 0 5px hsla(0,0%,0%,.5);
+    overflow: hidden;
+    max-width: 600px;
+    margin: 2rem auto;
+    position: relative;
+}
+        
+.slideshow ul {
+    padding-bottom: 66.67%;/* ratio pour le responsive */
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+}
+        
+.slideshow li {
+    top: 0;
+    left: 0;
+    animation: slideshow 25s ease infinite;
+    position: absolute;
+    opacity: 0;
+}
+    
+.slideshow li:nth-child(2) {
+    animation-delay: 5s;
+}
+    
+.slideshow li:nth-child(3) {
+    animation-delay: 10s;
+}
+    
+.slideshow li:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.slideshow li:nth-child(5) {
+    animation-delay: 20s;
+}
+    
+@keyframes slideshow {
+    0%{
+        opacity: 0;
+    }
+    
+    10%{
+        opacity: 1;
+    }
+    
+    20%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+
+/* Partie Histoire de la Reunion */
+.contenu_histoire_texte {
+    border: 3px double rgb(184, 10, 10);
+    width: 80%;
+    height: 30%;
+    margin: auto; /* centrer le cadre */ 
+    background-color: #ffe4c4;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.contenu_histoire {
+    border: 3px double black;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.histoire_image {
+    position: relative;
+    display: block;
+}   
+
+.histoire_titre {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+    line-height: 400px;
+}   
+
+.histoire_titre:hover {
+    opacity: 1;
+    cursor: pointer;      
+}
+
+.histoire_titre h2 {
+    color: white;
+    display: inline-table;
+    vertical-align: middle;
+    line-height: 100%;            
+}
+
+
+/* Partie Faune et Flore */
+.contenu_faune_et_flore {
+    border: 10px double rgb(184, 10, 10);
+    width: 80%;
+    height: 500px;
+    margin: auto; /* centrer le cadre */
+    box-shadow: 2px 2px 4px #264653;
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.contenu_faune{
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/merle-maurice.jpg);
+    background-size: cover;
+    background-position: center;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.contenu_flore{
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/flore.jpg);
+    background-size: cover;
+    background-position: center;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.faune_titre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(117, 6, 6);
+    background-color:  #134e5ed3;
+}
+
+.flore_titre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(117, 6, 6);
+    background-color:  #134e5ed3;
+}
+
+/* Effet au survol des images de faune et de flore*/
+.contenu_faune:hover{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+    cursor: pointer;
+}
+
+.contenu_flore:hover{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+    cursor: pointer;
+}
+
+/* Partie destination la Reunion */
+.contenu_destination_texte_et_image_reunion {
+    border: 10px double rgb(184, 10, 10);
+    width: 80%;
+    height: 500px;
+    margin: auto; /* centrer le cadre */
+    box-shadow: 2px 2px 4px #264653;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.contenu_destination_texte1 {
+    background-image: url(./images/plage-fond-horizon-mer-tropicale.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100%;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.intro_texte2 {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-align: center;
+
+    /* Centrer le texte horizontal et vertical */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(189, 15, 15);
+}
+
+.contenu_image_reunion{
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/accueil/carte-reunion.jpg);
+    background-size: cover;
+    background-position: center;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+/* Effet au survol du texte et de l'image de la Reunion*/
+.contenu_image_reunion:hover {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+    cursor: pointer;
+}
+
+.contenu_destination_texte2 {
+    border: 3px double rgb(184, 10, 10);
+    width: 80%;
+    height: 30%;
+    margin: auto; /* centrer le cadre */ 
+    background-color: #ffe4c4;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro_texte3 {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* Partie coutume et culture : chansons, poésie, religions */
+.contenu_coutume {
+    width: 97%;
+    height: 30%;
+    margin: auto; /* centrer le cadre */ 
+    background-color: #ffe4c4;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.coutume_titre {
+    margin: auto;
+    padding: 7px 0 7px 0;
+    font-size: 25px;
+    background-color:rgb(184, 10, 10);
+    color: white;
+    border-bottom: 3px solid #e9c46a;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.coutume_image {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.coutume_image_1 {
+    width: 33.3%;
+    height: 100%;
+    transition: 1.5s ease-in-out;
+}
+
+.coutume_image_2 {
+    width: 33.3%;
+    height: 100%;
+    transition: 1.5s ease-in-out;
+}
+
+.coutume_image_3 {
+    width: 33.3%;
+    height: 100%;
+    transition: 1.5s ease-in-out;
+}
+
+/* Effets survol sur les images coutume et culture */
+.coutume_image_1:hover{
+    width: 50%;
+    transition: 1.5s ease;
+}
+
+.coutume_image_2:hover{
+    width: 50%;
+    transition: 1.5s ease;
+}
+
+.coutume_image_3:hover{
+    width: 50%;
+    transition: 1.5s ease;
+}
+
+/*Style sur les titres */
+#culture_chanson, #culture_religion, #culture_poesie {
+    padding: 5px;
+    background-color: white;
+    color: rgb(184, 10, 10)3;
+    border: solid 2px rgb(184, 10, 10);
+    box-shadow: 2px 2px 4px rgb(184, 10, 10);
+    text-align: center;
+}
+
+#culture_chanson, #culture_religion, #culture_poesie:hover{
+    cursor: pointer;
+}
+
+
+/* Partie droits */
+.pied_page {
+    width: 100%;
+    height: auto;
+    background:  #d8d8d8;
+    text-align: center;
+    font-weight: bold;
+}

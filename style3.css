@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/randonnee/randonnees-banniere-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Figure géopmétrique pour le Menu */
+#figure_pointer {
+    width: 700px;
+    height: 50px;
+    position: relative;
+    background: rgb(184, 10, 10);
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#figure_pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;  
+}
+
+#figure_pointer:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid rgb(184, 10, 10);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;  
+}
+
+/* Menu */
+.menu ul {
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    display: block;
+    padding: 12px;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu a:hover {
+    background: black;
+    color: yellowgreen;
+    transition: 0.6s;
+}
+
+.titre {
+    border: 3px double rgb(184, 10, 10);
+    background-color: #3CB371;
+    width: 700px;
+    height: 100px;
+    margin: auto;
+    color: rgb(56, 10, 10);
+    padding: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,.15);
+}
+
+/* Le titre de la page */
+h1 {
+    text-align: center;
+    color: white;
+}
+
+/* Phase d'introduction */
+.introduction {
+    border: 3px double rgb(184, 10, 10);
+    background-color: #48536B;
+    width: 900px;
+    height: 610px;
+    margin: auto;
+    color: rgb(217, 235, 235);
+    padding: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,.15);
+}
+
+p {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: white;
+}
+
+/* Liste des lieux de randonnées */ 
+.contenu {
+    border: 3px double rgb(184, 10, 10);
+    width: 90%;
+    height: auto;
+    margin: auto;
+    color: rgb(56, 10, 10);
+    padding: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,.15);
+    background-color: rgba(102, 98, 77, 0.452);
+}
+
+.sentiers {
+    width: 90%;
+    height: auto;
+    margin: 100px auto 50px auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Paragraphe de description des images de rando */
+p {
+    padding: 20px 50px 20px 50px;
+    line-height: 30px;
+}
+
+/* Titre des images de rando */
+.sentier_titre {
+    padding: 10px;
+    background-color: rgba(30, 13, 107, 0.9);
+    color: white;
+    border-top: 2px solid white;
+    text-align: center;
+}
+
+/* Block contenant les paragraphes de description d'image */
+.sentier_texte {
+    width: 100%;
+    height: 35%;
+    background-color: rgb(30, 13, 107);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensemble des block images */
+.sentier_1 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_1__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/la-glaciere.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sentier_2 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_2__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/cascade-du-chaudron.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sentier_3 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+
+}
+
+.sentier_3__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/Cascade-Maniquet-randonnee.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_4 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_4__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/sentier-providence.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_5 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_5__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/cascades_vallee_de_takamaka_04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_6 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_6__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/cascade-bassin-boeuf.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_7 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_7__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/bassin-des-hirondelles.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_8 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_8__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/bassin-la-paix-et-bassin-la-mer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_9 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_9__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/bassin-sassa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_10 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_10__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/cap-jaune.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_11 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_11__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/cascade-biberon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_12 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_12__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/cascade-de-bras-rouge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_13 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_13__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/chemin-anglais-chemin-cremont.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_14 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_14__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/bras-sec-cilaos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_15 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_15__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/circuit-ravenales.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_16 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_16__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/col-taibit.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_17 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_17__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/hauts-mont-vert.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_18 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_18__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/foret-de-tamarins.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sentier_19 {
+    width: 50%;
+    height: 700px;
+    border-right: 2px solid #e9c46a;
+}
+
+.sentier_19__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/grand-bassin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sentier_20 {
+    width: 50%;
+    height: 700px;
+    border-left: 2px solid #e9c46a;
+}
+
+.sentier_20__image {
+    width: 100%;
+    height: 65%;
+    background-image: url(./images/randonnee/grand-benare.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Bas de page */
+.pied_page {
+    width: 100%;
+    height: auto;
+    background-color:  #ffe4c4;
+    text-align: center;
+}
+
+.intro_texte {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: black;
+}
